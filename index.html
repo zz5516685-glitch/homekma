@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>생성형 AI 소개 및 문의</title>
+  <style>
+    :root{--bg:#f7fafc;--card:#ffffff;--accent:#2563eb;--muted:#6b7280}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Noto Sans KR',Arial;background:var(--bg);color:#111;margin:0;padding:24px}
+    .wrap{max-width:880px;margin:0 auto}
+    header{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+    h1{margin:0;font-size:1.6rem}
+    .lead{color:var(--muted);margin:0}
+    .card{background:var(--card);border-radius:10px;padding:18px;box-shadow:0 6px 18px rgba(15,23,42,0.06);margin-bottom:14px}
+    h2{margin:0 0 8px 0}
+    ul{margin:0 0 8px 1.1rem;color:var(--muted)}
+    form{display:flex;flex-direction:column;gap:10px}
+    label{display:flex;flex-direction:column;font-size:0.95rem}
+    input[type="text"],input[type="email"],select,textarea{padding:8px;border:1px solid #e6e9ef;border-radius:6px;font-size:0.95rem}
+    .row{display:flex;gap:10px}
+    .small{font-size:0.85rem;color:var(--muted)}
+    button{background:var(--accent);color:#fff;border:none;padding:10px 14px;border-radius:8px;cursor:pointer}
+    footer{margin-top:10px;font-size:0.85rem;color:var(--muted)}
+    @media (max-width:600px){.row{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>생성형 AI(Generative AI) 소개</h1>
+      <p class="lead">텍스트·이미지·음성 등을 생성하는 인공지능 기술의 기본 개념과 활용 예시를 간단히 설명합니다.</p>
+    </header>
+
+    <section class="card" id="about">
+      <h2>생성형 AI란?</h2>
+      <p class="small">생성형 AI는 학습한 데이터를 바탕으로 새로운 콘텐츠(텍스트, 이미지, 소리 등)를 만들어내는 모델을 말합니다. 대표적인 예로 대형 언어 모델(LLM), 이미지 생성 모델, 오디오 합성 모델 등이 있습니다.</p>
+    </section>
+
+    <section class="card" id="examples">
+      <h2>주요 예시</h2>
+      <ul>
+        <li>텍스트 생성: 문서 작성, 요약, 번역, 챗봇</li>
+        <li>이미지 생성: 프롬프트 기반 그림/디자인 생성</li>
+        <li>음성·오디오: 음성 합성, 음악 생성</li>
+        <li>코드 생성: 코드 완성 및 예제 생성</li>
+      </ul>
+    </section>
+
+    <section class="card" id="usage">
+      <h2>활용과 주의사항</h2>
+      <p class="small">활용: 콘텐츠 제작, 프로토타입, 고객 응대 자동화 등. 주의: 편향, 허위정보, 저작권 문제, 개인정보 보호 등 윤리적·법적 고려가 필요합니다.</p>
+    </section>
+
+    <section class="card" id="contact">
+      <h2>문의 / 피드백</h2>
+      <form action="#" method="post" onsubmit="alert('폼이 제출되었습니다. (테스트 모드)');return false;">
+        <label>이름
+          <input type="text" name="name" placeholder="예: 홍길동" required>
+        </label>
+
+        <label>이메일 (선택)
+          <input type="email" name="email" placeholder="example@domain.com">
+        </label>
+
+        <label>관심 분야
+          <select name="topic">
+            <option value="text">텍스트 생성</option>
+            <option value="image">이미지 생성</option>
+            <option value="audio">음성/오디오</option>
+            <option value="other">기타</option>
+          </select>
+        </label>
+
+        <label>메시지
+          <textarea name="message" rows="4" placeholder="문의 내용을 입력하세요..."></textarea>
+        </label>
+
+        <label style="flex-direction:row;align-items:center;gap:8px;">
+          <input type="checkbox" name="consent" required>
+          <span class="small">개인정보 수집·이용에 동의합니다.</span>
+        </label>
+
+        <div class="row">
+          <button type="submit">보내기</button>
+          <button type="reset" style="background:#e5e7eb;color:#111">초기화</button>
+        </div>
+      </form>
+    </section>
+
+    <footer class="small">참고: 이 페이지는 설명 및 테스트용 폼을 포함한 예제입니다. 실제 배포 전에는 백엔드와 개인정보 처리 방침을 준비하세요.</footer>
+  </div>
+</body>
+</html>
